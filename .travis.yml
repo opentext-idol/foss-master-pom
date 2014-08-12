@@ -1,18 +1,20 @@
 language: java
 jdk:
-  - oraclejdk7
+- oraclejdk7
 branches:
   only:
-    - master
-before_install: openssl aes-256-cbc -K $encrypted_a5a5f3472c80_key -iv $encrypted_a5a5f3472c80_iv -in key.gpg.enc -out key.gpg -d
-script: "mvn deploy -Prelease"
+  - master
+before_install:
+- openssl aes-256-cbc -K $encrypted_a5a5f3472c80_key -iv $encrypted_a5a5f3472c80_iv
+  -in key.gpg.enc -out key.gpg -d
+script: mvn deploy -Prelease
 env:
   global:
-    # SONATYPE_USERNAME
-    - secure: "HEqU9CbwFY3KgFA361DMLUq+YcNvUZyU/Bb+E/uoDMblWQqQW5+WZOcXu03swd7R0rjoJH1ECLybD2ziNgUz6Y9Godv0fGKwoGXkH2ucdBUFZq7v7X8kBT0XyUrGCJfaT4SPh2IFosh7JB9fcrGBJE7YxfErsP1KLNUh2t8GPrs="
-    # SONATYPE_PASSWORD
-    - secure: "adc/LWRo8tpdAHAWLmLz/3BycMswdVFcu5A9Y8UiponCKYEPkAg3BjTqAoFaHPPa4wAYRnQ8Ot6soQgvPfdni/ilI07dpeN3GGyfggdCxUv7ZFOseGG1nTkPhjXLQFmQCBUDQYVH+5IaF3tepQC5ZPEnZ1moZV4bZvZ67Axv0Xs="
-    # GPG_PASSPHRASE
-    - secure: "TewxHEPBZKVAQMH6C3Cc5Q4iCYst3iQ/kX+MO5XumOKJnqddickhNbiN5ApvyV6S03XVaggcRvsNGnMcmaHCddFYLVkaQsqX8voUGaAF7DQ8mIkiBmOVFzlDwsCRUV5lDG5V7Ia08OH5cZwsck+D1XtsjfiM1f/cDhLE2l5m8uw="
-    # GPG_KEYID
-    - secure: "ndsEWPBybTwqmNfcmFIXSYheYZxK1MwSMKFxnnUFdOCvafv1iORnfGNcpYn/+MpdSTXo1ODpZkj7hVsgxrwST98yGPn+tn3FGz0Xfnf19qNeuXzZ5/1DLOJO1sCTM2Ks22KH5UOf+hm7EbyujCPDbi8W4cJBLvSF58YMnngwhns="
+  # SONATYPE_USERNAME
+  - secure: HEqU9CbwFY3KgFA361DMLUq+YcNvUZyU/Bb+E/uoDMblWQqQW5+WZOcXu03swd7R0rjoJH1ECLybD2ziNgUz6Y9Godv0fGKwoGXkH2ucdBUFZq7v7X8kBT0XyUrGCJfaT4SPh2IFosh7JB9fcrGBJE7YxfErsP1KLNUh2t8GPrs=
+  # SONATYPE_PASSWORD
+  - secure: adc/LWRo8tpdAHAWLmLz/3BycMswdVFcu5A9Y8UiponCKYEPkAg3BjTqAoFaHPPa4wAYRnQ8Ot6soQgvPfdni/ilI07dpeN3GGyfggdCxUv7ZFOseGG1nTkPhjXLQFmQCBUDQYVH+5IaF3tepQC5ZPEnZ1moZV4bZvZ67Axv0Xs=
+  # GPG_PASSPHRASE
+  - secure: TewxHEPBZKVAQMH6C3Cc5Q4iCYst3iQ/kX+MO5XumOKJnqddickhNbiN5ApvyV6S03XVaggcRvsNGnMcmaHCddFYLVkaQsqX8voUGaAF7DQ8mIkiBmOVFzlDwsCRUV5lDG5V7Ia08OH5cZwsck+D1XtsjfiM1f/cDhLE2l5m8uw=
+  # GPG_KEYID
+  - secure: ndsEWPBybTwqmNfcmFIXSYheYZxK1MwSMKFxnnUFdOCvafv1iORnfGNcpYn/+MpdSTXo1ODpZkj7hVsgxrwST98yGPn+tn3FGz0Xfnf19qNeuXzZ5/1DLOJO1sCTM2Ks22KH5UOf+hm7EbyujCPDbi8W4cJBLvSF58YMnngwhns=
