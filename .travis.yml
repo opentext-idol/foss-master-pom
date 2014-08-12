@@ -6,7 +6,7 @@ branches:
   - master
 before_install:
 - echo $GPG_KEY > tmp.txt && gpg --batch --passphrase-file tmp.txt key.gpg.gpg
-script: mvn deploy -Prelease -X
+script: mvn deploy -Prelease
 env:
   global:
   # SONATYPE_USERNAME
