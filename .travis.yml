@@ -5,8 +5,7 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_a5a5f3472c80_key -iv $encrypted_a5a5f3472c80_iv
-  -in key.gpg.enc -out key.gpg -d
+- openssl aes-256-cbc -K "$OPENSSL_KEY" -in key.gpg.enc -out key.gpg -d
 script: mvn deploy -Prelease
 env:
   global:
@@ -18,3 +17,5 @@ env:
   - secure: TewxHEPBZKVAQMH6C3Cc5Q4iCYst3iQ/kX+MO5XumOKJnqddickhNbiN5ApvyV6S03XVaggcRvsNGnMcmaHCddFYLVkaQsqX8voUGaAF7DQ8mIkiBmOVFzlDwsCRUV5lDG5V7Ia08OH5cZwsck+D1XtsjfiM1f/cDhLE2l5m8uw=
   # GPG_KEYID
   - secure: ndsEWPBybTwqmNfcmFIXSYheYZxK1MwSMKFxnnUFdOCvafv1iORnfGNcpYn/+MpdSTXo1ODpZkj7hVsgxrwST98yGPn+tn3FGz0Xfnf19qNeuXzZ5/1DLOJO1sCTM2Ks22KH5UOf+hm7EbyujCPDbi8W4cJBLvSF58YMnngwhns=
+  #OPENSSL_KEY
+  - secure: YuOx+b1EpxqCUdAcQh8Yg+bXNBBaN/5TncSEqXkN9I3MeXNVqGDkt2WjEtrOQixbWxMkqOO6kMb4MHTqtzj/yFp+aBdvbiIBSzNWURBUbQhNxvrqKCymDfHMZpCoDNbfJGIuH6uV+d/FE7SyHoyTFyp9bEZQ5xq8sBhu3jqiHcc=
