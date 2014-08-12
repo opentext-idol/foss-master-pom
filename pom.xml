@@ -119,6 +119,11 @@ THE SOFTWARE.
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <keyname>${env.GPG_KEYID}</keyname>
+                                    <passphrase>${env.GPG_PASSPHRASE}</passphrase>
+                                    <secretKeyring>${project.basedir}/key.gpg</secretKeyring>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -130,7 +135,7 @@ THE SOFTWARE.
                         <configuration>
                             <serverId>ossrh</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
                 </plugins>
