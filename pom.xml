@@ -31,7 +31,7 @@ THE SOFTWARE.
 
     <groupId>com.hp.autonomy.frontend</groupId>
     <artifactId>foss-master-pom</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>HP Autonomy FOSS Master POM</name>
@@ -134,13 +134,6 @@ THE SOFTWARE.
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
-                                <configuration>
-                                    <defaultKeyring>false</defaultKeyring>
-                                    <keyname>${env.GPG_KEYID}</keyname>
-                                    <passphrase>${env.GPG_PASSPHRASE}</passphrase>
-                                    <publicKeyring>${project.basedir}/public.gpg</publicKeyring>
-                                    <secretKeyring>${project.basedir}/secret.gpg</secretKeyring>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -154,6 +147,40 @@ THE SOFTWARE.
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>travis</id>
+            <activation>
+                <property>
+                    <name>env.TRAVIS</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <defaultKeyring>false</defaultKeyring>
+                                    <keyname>${env.GPG_KEYID}</keyname>
+                                    <passphrase>${env.GPG_PASSPHRASE}</passphrase>
+                                    <publicKeyring>${project.basedir}/public.gpg</publicKeyring>
+                                    <secretKeyring>${project.basedir}/secret.gpg</secretKeyring>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
