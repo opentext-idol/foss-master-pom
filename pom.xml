@@ -121,7 +121,8 @@ THE SOFTWARE.
                                 </goals>
                                 <configuration>
                                     <passphrase>${env.GPG_PASSPHRASE}</passphrase>
-                                    <secretKeyring>${project.basedir}/key.gpg</secretKeyring>
+                                    <publicKeyring>${project.basedir}/public.gpg</publicKeyring>
+                                    <secretKeyring>${project.basedir}/secret.gpg</secretKeyring>
                                 </configuration>
                             </execution>
                         </executions>
