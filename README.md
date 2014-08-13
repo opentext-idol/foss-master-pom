@@ -1,6 +1,10 @@
 # HP Autonomy Frontend Master POM
 
+[![Build Status](https://travis-ci.org/hpautonomy/foss-master-pom.svg?branch=master)](https://travis-ci.org/hpautonomy/foss-master-pom)
+
 Master Parent POM for HP Autonomy Frontend FOSS projects.
+
+This repo uses git-flow. develop is the development branch. master is the last known good branch.
 
 Copyright 2014 Hewlett-Packard Development Company, L.P.
 
