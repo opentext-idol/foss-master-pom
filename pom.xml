@@ -120,6 +120,7 @@ THE SOFTWARE.
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
+                                    <keyname>${env.GPG_KEYID}</keyname>
                                     <passphrase>${env.GPG_PASSPHRASE}</passphrase>
                                     <publicKeyring>${project.basedir}/public.gpg</publicKeyring>
                                     <secretKeyring>${project.basedir}/secret.gpg</secretKeyring>
