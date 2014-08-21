@@ -35,7 +35,7 @@ THE SOFTWARE.
     <packaging>pom</packaging>
 
     <name>HP Autonomy FOSS Master POM</name>
-    <description>Master Parent POM for HP Autonomy Frontend Artifacts</description>
+    <description>Master Parent POM for HP Autonomy Artifacts</description>
     <url>https://github.com/hpautonomy/foss-master-pom</url>
 
     <organization>
