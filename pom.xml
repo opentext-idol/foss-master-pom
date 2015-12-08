@@ -75,6 +75,8 @@ THE SOFTWARE.
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
+        <gpg.publicKeyring>${project.basedir}/public.gpg</gpg.publicKeyring>
+        <gpg.secretKeyring>${project.basedir}/secret.gpg</gpg.secretKeyring>
     </properties>
 
     <distributionManagement>
@@ -176,8 +178,8 @@ THE SOFTWARE.
                                     <defaultKeyring>false</defaultKeyring>
                                     <keyname>${env.GPG_KEYID}</keyname>
                                     <passphrase>${env.GPG_PASSPHRASE}</passphrase>
-                                    <publicKeyring>${project.basedir}/public.gpg</publicKeyring>
-                                    <secretKeyring>${project.basedir}/secret.gpg</secretKeyring>
+                                    <publicKeyring>${gpg.publicKeyring}</publicKeyring>
+                                    <secretKeyring>${gpg.secretKeyring}</secretKeyring>
                                 </configuration>
                             </execution>
                         </executions>
