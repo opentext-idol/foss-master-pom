@@ -3,7 +3,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Hewlett-Packard Development Company, L.P.
+Copyright (c) 2014-2015 Hewlett-Packard Development Company, L.P.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ THE SOFTWARE.
 
     <groupId>com.hp.autonomy</groupId>
     <artifactId>foss-master-pom</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <name>HP Autonomy FOSS Master POM</name>
@@ -55,9 +55,9 @@ THE SOFTWARE.
     <developers>
         <developer>
             <name>Alex Scown</name>
-            <email>alex.scown@hp.com</email>
-            <organization>HP</organization>
-            <organizationUrl>http://www.hp.com</organizationUrl>
+            <email>alex.scown@hpe.com</email>
+            <organization>HPE</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
     </developers>
 
@@ -75,6 +75,8 @@ THE SOFTWARE.
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
+        <gpg.publicKeyring>${project.basedir}/public.gpg</gpg.publicKeyring>
+        <gpg.secretKeyring>${project.basedir}/secret.gpg</gpg.secretKeyring>
     </properties>
 
     <distributionManagement>
@@ -176,8 +178,8 @@ THE SOFTWARE.
                                     <defaultKeyring>false</defaultKeyring>
                                     <keyname>${env.GPG_KEYID}</keyname>
                                     <passphrase>${env.GPG_PASSPHRASE}</passphrase>
-                                    <publicKeyring>${project.basedir}/public.gpg</publicKeyring>
-                                    <secretKeyring>${project.basedir}/secret.gpg</secretKeyring>
+                                    <publicKeyring>${gpg.publicKeyring}</publicKeyring>
+                                    <secretKeyring>${gpg.secretKeyring}</secretKeyring>
                                 </configuration>
                             </execution>
                         </executions>
