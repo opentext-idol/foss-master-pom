@@ -31,7 +31,7 @@ THE SOFTWARE.
 
     <groupId>com.hp.autonomy</groupId>
     <artifactId>foss-master-pom</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <name>HP Autonomy FOSS Master POM</name>
@@ -55,9 +55,9 @@ THE SOFTWARE.
     <developers>
         <developer>
             <name>Alex Scown</name>
-            <email>alex.scown@hp.com</email>
-            <organization>HP</organization>
-            <organizationUrl>http://www.hp.com</organizationUrl>
+            <email>alex.scown@hpe.com</email>
+            <organization>HPE</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
     </developers>
 
