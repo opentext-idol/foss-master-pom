@@ -34,13 +34,13 @@ THE SOFTWARE.
     <version>2.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>HP Autonomy FOSS Master POM</name>
-    <description>Master Parent POM for HP Autonomy Artifacts</description>
-    <url>https://github.com/hpautonomy/foss-master-pom</url>
+    <name>Micro Focus IDOL FOSS Master POM</name>
+    <description>Master Parent POM for Micro Focus IDOL Artifacts</description>
+    <url>https://github.com/microfocus-idol/foss-master-pom</url>
 
     <organization>
-        <name>Hewlett-Packard Development Company, L.P.</name>
-        <url>http://www.hp.com/</url>
+        <name>Micro Focus International plc.</name>
+        <url>http://www.microfocus.com/</url>
     </organization>
 
     <inceptionYear>2014</inceptionYear>
@@ -55,21 +55,18 @@ THE SOFTWARE.
     <developers>
         <developer>
             <name>Alex Scown</name>
-            <email>alex.scown@hpe.com</email>
-            <organization>HPE</organization>
-            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:hpautonomy/foss-master-pom.git</connection>
-        <developerConnection>scm:git:git@github.com:hpautonomy/foss-master-pom.git</developerConnection>
-        <url>git@github.com:hpautonomy/foss-master-pom.git</url>
+        <connection>scm:git:git@github.com:microfocus-idol/foss-master-pom.git</connection>
+        <developerConnection>scm:git:git@github.com:microfocus-idol/foss-master-pom.git</developerConnection>
+        <url>git@github.com:microfocus-idol/foss-master-pom.git</url>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/hpautonomy/foss-master-pom/issues</url>
+        <url>https://github.com/microfocus-idol/foss-master-pom/issues</url>
     </issueManagement>
 
     <properties>
