@@ -22,13 +22,13 @@
     <version>2.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Micro Focus IDOL FOSS Master POM</name>
-    <description>Master Parent POM for Micro Focus IDOL Artifacts</description>
+    <name>OpenText IDOL FOSS Master POM</name>
+    <description>Master Parent POM for OpenText IDOL Artifacts</description>
     <url>https://github.com/microfocus-idol/foss-master-pom</url>
 
     <organization>
-        <name>Micro Focus International plc.</name>
-        <url>http://www.microfocus.com/</url>
+        <name>OpenText</name>
+        <url>https://www.opentext.com/</url>
     </organization>
 
     <inceptionYear>2014</inceptionYear>
