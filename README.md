@@ -6,6 +6,6 @@ This repo uses git-flow. develop is the development branch. master is the last k
 
 ## License
 
-(c) Copyright 2014-2018, 2023 OpenText or one of its affiliates.
+Copyright 2014-2018, 2023 OpenText or one of its affiliates.
 
 Licensed under the MIT License (the "License"); you may not use this project except in compliance with the License.
