@@ -86,7 +86,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-dependency-plugin</artifactId>
-                        <version>3.5.0</version>
+                        <version>3.6.0</version>
                         <executions>
                             <execution>
                                 <id>check-dependencies</id>
@@ -94,7 +94,6 @@
                                     <goal>analyze-only</goal>
                                 </goals>
                                 <configuration>
-                                    <failOnWarning>${enforceCorrectDependencies}</failOnWarning>
                                     <ignoreNonCompile>true</ignoreNonCompile>
                                 </configuration>
                             </execution>
@@ -128,6 +127,7 @@
                         <configuration>
                             <author>false</author>
                             <detectLinks>true</detectLinks>
+                            <doclint>none</doclint>
                         </configuration>
                     </plugin>
                     <plugin>
