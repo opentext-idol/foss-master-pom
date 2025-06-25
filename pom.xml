@@ -63,8 +63,6 @@
         <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
         <netbeans.hint.jdkPlatform>JDK_17</netbeans.hint.jdkPlatform>
-        <gpg.publicKeyring>${project.basedir}/public.gpg</gpg.publicKeyring>
-        <gpg.secretKeyring>${project.basedir}/secret.gpg</gpg.secretKeyring>
     </properties>
 
     <distributionManagement>
@@ -182,8 +180,8 @@
                                     <defaultKeyring>false</defaultKeyring>
                                     <keyname>${env.GPG_KEYID}</keyname>
                                     <passphrase>${env.GPG_PASSPHRASE}</passphrase>
-                                    <publicKeyring>${gpg.publicKeyring}</publicKeyring>
-                                    <secretKeyring>${gpg.secretKeyring}</secretKeyring>
+                                    <publicKeyring>${env.GPG_PUBLIC_KEY_PATH}</publicKeyring>
+                                    <secretKeyring>${env.GPG_KEY_PATH}</secretKeyring>
                                 </configuration>
                             </execution>
                         </executions>
