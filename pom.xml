@@ -102,7 +102,7 @@
                                         <argument>-c</argument>
                                         <argument>
                                             set -euo pipefail
-                                            if [[ $a == *-SNAPSHOT ]]; then exit 0; fi
+                                            if [[ "${project.version}" == *-SNAPSHOT ]]; then exit 0; fi
                                             TOKEN=$(printf '%s:%s' "$SONATYPE_USERNAME" "$SONATYPE_PASSWORD" | base64 | tr -d '\n')
                                             curl --fail --show-error --request POST \
                                                 --header "Authorization: Bearer $TOKEN" \
