@@ -80,7 +80,7 @@
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>0.10.0</version>
+                        <version>0.8.0</version>
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>ossrh</publishingServerId>
@@ -97,6 +97,7 @@
                                 <phase>deploy</phase>
                                 <goals><goal>exec</goal></goals>
                                 <configuration>
+                                    <skip>${skipDeploy}</skip>
                                     <executable>bash</executable>
                                     <arguments>
                                         <argument>-c</argument>
