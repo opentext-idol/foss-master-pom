@@ -80,6 +80,7 @@
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
+                        <!-- NOTE: if upgrading, beware that skipPublishing behaviour changes in 0.9.0 to also skip producing the bundle -->
                         <version>0.8.0</version>
                         <extensions>true</extensions>
                         <configuration>
