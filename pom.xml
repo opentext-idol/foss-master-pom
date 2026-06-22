@@ -65,16 +65,15 @@
         <netbeans.hint.jdkPlatform>JDK_17</netbeans.hint.jdkPlatform>
     </properties>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <profiles>
         <profile>
-            <id>release</id>
+            <id>deploy-public</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
             <build>
                 <plugins>
                     <plugin>
@@ -118,6 +117,19 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>deploy-custom</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>${idol.frontend.mavenRepo.snapshot.id}</id>
+                    <url>${idol.frontend.mavenRepo.snapshot.url}</url>
+                </snapshotRepository>
+                <repository>
+                    <id>${idol.frontend.mavenRepo.release.id}</id>
+                    <url>${idol.frontend.mavenRepo.release.url}</url>
+                </repository>
+            </distributionManagement>
         </profile>
     </profiles>
 
