@@ -63,6 +63,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
         <netbeans.hint.jdkPlatform>JDK_17</netbeans.hint.jdkPlatform>
+        <npm.binExtension/>
     </properties>
 
     <profiles>
@@ -130,6 +131,17 @@
                     <url>${idol.frontend.mavenRepo.release.url}</url>
                 </repository>
             </distributionManagement>
+        </profile>
+        <profile>
+            <id>windows</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <properties>
+                <npm.binExtension>.cmd</npm.binExtension>
+            </properties>
         </profile>
     </profiles>
 
@@ -279,22 +291,31 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>tools.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>3.2.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.13.2</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.hamcrest</groupId>
                 <artifactId>hamcrest</artifactId>
                 <version>3.0</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
-                <version>5.15.2</version>
-                <scope>test</scope>
+                <version>5.23.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.46</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
